@@ -3,11 +3,10 @@ import { connectToDatabase } from "@/lib/db";
 import { Reservation } from "@/models/Reservation";
 import { requireAdmin } from "@/lib/auth";
 
-interface RouteContext {
-  params: { id: string };
-}
-
-export async function PATCH(req: Request, context: RouteContext) {
+export async function PATCH(
+  req: Request,
+  context: { params: { id: string } }
+) {
   const { id } = context.params;
 
   const admin = await requireAdmin(req.headers);
