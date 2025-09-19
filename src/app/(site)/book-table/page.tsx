@@ -10,7 +10,9 @@ type ReservationResponse = {
 export default function BookTablePage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
-  const [messageType, setMessageType] = useState<"success" | "error">("success");
+  const [messageType, setMessageType] = useState<"success" | "error">(
+    "success"
+  );
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -61,8 +63,8 @@ export default function BookTablePage() {
             Reserve Your Table
           </h1>
           <p className="text-xl text-coffee-700 max-w-2xl mx-auto leading-relaxed">
-            Experience the warmth of Capitano Coffee & Café. Book your perfect spot and 
-            let us create a memorable dining experience for you.
+            Experience the warmth of Capitano Coffee & Café. Book your perfect
+            spot and let us create a memorable dining experience for you.
           </p>
         </div>
 
@@ -141,7 +143,7 @@ export default function BookTablePage() {
                     required
                   >
                     <option value="">Select number of guests</option>
-                    {[1,2,3,4,5,6,7,8,9,10].map(num => (
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                       <option key={num} value={num}>
                         {num} {num === 1 ? "Guest" : "Guests"}
                       </option>

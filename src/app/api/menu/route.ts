@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/db";
-import { Menu } from "@/models/Menu";
+import { MenuDocument, Menu } from "@/models/Menu";
 import { ensureCloudinaryConfigured, cloudinary } from "@/lib/cloudinary";
 import { requireAdmin } from "@/lib/auth";
 
@@ -8,7 +8,8 @@ type CloudinaryUploadResult = { secure_url: string };
 
 export async function GET() {
   await connectToDatabase();
-  const latest = await Menu.findOne().sort({ uploadedAt: -1 }).lean();
+  // Ensure TypeScript knows this object has pdfUrl
+  const latest = await Menu.findOne().sort({ uploadedAt: -1 }).lean<MenuDocument>();
   return NextResponse.json({ pdfUrl: latest?.pdfUrl || null });
 }
 

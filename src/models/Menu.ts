@@ -1,6 +1,6 @@
-import { Schema, model, models } from "mongoose";
+import { Schema, model, models, Document } from "mongoose";
 
-export interface MenuDocument {
+export interface MenuDocument extends Document{
   pdfUrl: string;
   uploadedAt: Date;
 }

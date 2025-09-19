@@ -5,9 +5,9 @@ import { requireAdmin } from "@/lib/auth";
 
 export async function PATCH(
   req: Request,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
-  const { id } = params;
+  const { id } = await context.params;
 
   const admin = await requireAdmin(req.headers);
   if (!admin) {
