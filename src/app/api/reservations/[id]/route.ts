@@ -3,11 +3,8 @@ import { connectToDatabase } from "@/lib/db";
 import { Reservation } from "@/models/Reservation";
 import { requireAdmin } from "@/lib/auth";
 
-export async function PATCH(
-  req: Request,
-  context: { params: { id: string } }
-) {
-  const { id } = context.params;
+export async function PATCH(req: Request, { params }: any) {
+  const { id } = params;
 
   const admin = await requireAdmin(req.headers);
   if (!admin) {
