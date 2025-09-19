@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
         guests: Number(guests),
       }
     );
-  } catch (e) {
+  } catch (_e) {
     // ignore email errors in API response
   }
 

@@ -20,7 +20,7 @@ export async function GET(_req: NextRequest) {
         "Cache-Control": "public, max-age=300",
       },
     });
-  } catch (e) {
+  } catch (_e) {
     return NextResponse.json({ error: "Failed to fetch PDF" }, { status: 502 });
   }
 }

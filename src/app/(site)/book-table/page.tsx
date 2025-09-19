@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type ReservationResponse = {
   error?: string;
-  reservation?: any; // You can replace `any` with your actual Reservation type
+  reservation?: unknown; // Replace with your Reservation type if needed
 };
 
 export default function BookTablePage() {

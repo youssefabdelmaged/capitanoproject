@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   const [rating, setRating] = useState(0);
@@ -111,10 +112,13 @@ export default function HomePage() {
           </div>
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Café interior with warm lighting and cozy atmosphere"
+                width={2070}
+                height={1553}
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                priority
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-coffee-600 rounded-full opacity-20"></div>
