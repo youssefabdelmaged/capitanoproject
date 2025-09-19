@@ -1,31 +1,30 @@
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <section className="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-coffee-900">
-            Savor every moment at our restaurant
+      <section className="relative overflow-hidden rounded-xl">
+        <div className="bg-coffee-900 text-white rounded-xl p-10 md:p-16">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            Enjoy your morning coffee shot
           </h1>
-          <p className="mt-4 text-coffee-700">
-            Crafted dishes, warm ambiance, and memorable experiences—served
-            daily.
+          <p className="mt-4 text-white/80 max-w-2xl">
+            Warm ambiance, crafted dishes, and a menu that changes with the
+            seasons.
           </p>
-          <div className="mt-6 flex gap-3">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <a
-              className="px-5 py-2 rounded-md bg-coffee-700 text-white hover:bg-coffee-800"
+              className="px-5 py-2 rounded-md bg-white text-coffee-900 hover:bg-coffee-100"
               href="/book-table"
             >
-              Reserve a table
+              Book a table
             </a>
             <a
-              className="px-5 py-2 rounded-md border border-coffee-300 text-coffee-800 hover:bg-coffee-100"
+              className="px-5 py-2 rounded-md border border-white/30 hover:bg-white/10"
               href="/menu"
             >
-              View menu
+              View our menu
             </a>
           </div>
         </div>
-        <div className="rounded-xl bg-coffee-100 aspect-video" />
       </section>
 
       <section className="grid md:grid-cols-3 gap-6">
@@ -62,12 +61,14 @@ export default function HomePage() {
       </section>
 
       <section className="text-center">
-        <div className="rounded-2xl bg-coffee-700 text-white p-10">
-          <h3 className="text-2xl font-semibold">Ready to join us?</h3>
+        <div className="rounded-2xl bg-coffee-800 text-white p-10">
+          <h3 className="text-2xl font-semibold">
+            Ready to experience our restaurant?
+          </h3>
           <p className="mt-2 text-white/80">Reserve a table in seconds.</p>
           <a
             href="/book-table"
-            className="inline-block mt-5 px-5 py-2 rounded-md bg-white text-coffee-800 hover:bg-coffee-100"
+            className="inline-block mt-5 px-5 py-2 rounded-md bg-white text-coffee-900 hover:bg-coffee-100"
           >
             Book now
           </a>
