@@ -1,24 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Restaurant app scaffold using Next.js App Router, Tailwind CSS, MongoDB (Mongoose), JWT auth, Cloudinary uploads, Nodemailer emails, and QR to menu.
 
 ## Getting Started
 
-First, run the development server:
+Create a `.env.local` with:
+
+```
+MONGODB_URI=
+MONGODB_DB=
+JWT_SECRET=supersecret
+
+# Seed admin (optional on first run)
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD=changeme
+
+# SMTP (Nodemailer)
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+SMTP_FROM="Capitano <no-reply@example.com>"
+
+# Cloudinary
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+# Public
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
