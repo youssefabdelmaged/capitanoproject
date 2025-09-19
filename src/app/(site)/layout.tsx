@@ -7,54 +7,36 @@ export default function SiteLayout({
 }) {
   return (
     <div className="min-h-screen bg-coffee-50 text-coffee-900">
-<<<<<<< HEAD
-      <header className="sticky top-0 z-40 border-b border-black/10 bg-coffee-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-          <Link href="/" className="font-semibold text-xl tracking-wide">
-            Capitano
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link href="/" className="hover:text-coffee-200">
-              Home
-            </Link>
-            <Link href="/menu" className="hover:text-coffee-200">
-              Menu
-            </Link>
-            <Link href="/contact" className="hover:text-coffee-200">
-              Contact
-            </Link>
-=======
       <header className="sticky top-0 z-40 border-b border-coffee-700/20 bg-coffee-900/95 backdrop-blur-md text-white shadow-lg">
         <div className="mx-auto max-w-6xl px-4 py-2 flex items-center justify-between">
-          <a 
+          <Link 
             href="/" 
             className="font-bold text-2xl tracking-wide hover:text-coffee-200 transition-colors duration-300 transform hover:scale-105"
           >
             Capitano
-          </a>
+          </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">
-            <a 
+            <Link 
               href="/" 
               className="relative hover:text-coffee-200 transition-colors duration-300 group"
             >
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coffee-200 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/menu" 
               className="relative hover:text-coffee-200 transition-colors duration-300 group"
             >
               Menu
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coffee-200 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/contact" 
               className="relative hover:text-coffee-200 transition-colors duration-300 group"
             >
               Contact
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coffee-200 transition-all duration-300 group-hover:w-full"></span>
-            </a>
->>>>>>> e36d454fccaadabfd40cbafb3197b49ec50d7233
+            </Link>
           </nav>
           <Link
             href="/book-table"
@@ -99,10 +81,10 @@ export default function SiteLayout({
             <div className="space-y-4">
               <h4 className="font-semibold text-coffee-100">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="/" className="text-coffee-300 hover:text-coffee-100 transition-colors">Home</a></li>
-                <li><a href="/menu" className="text-coffee-300 hover:text-coffee-100 transition-colors">Menu</a></li>
-                <li><a href="/book-table" className="text-coffee-300 hover:text-coffee-100 transition-colors">Book a Table</a></li>
-                <li><a href="/contact" className="text-coffee-300 hover:text-coffee-100 transition-colors">Contact</a></li>
+                <li><Link href="/" className="text-coffee-300 hover:text-coffee-100 transition-colors">Home</Link></li>
+                <li><Link href="/menu" className="text-coffee-300 hover:text-coffee-100 transition-colors">Menu</Link></li>
+                <li><Link href="/book-table" className="text-coffee-300 hover:text-coffee-100 transition-colors">Book a Table</Link></li>
+                <li><Link href="/contact" className="text-coffee-300 hover:text-coffee-100 transition-colors">Contact</Link></li>
               </ul>
             </div>
             

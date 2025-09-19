@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MenuPage() {
   const [pdfUrl, setPdfUrl] = useState<string | null>(null);
@@ -22,30 +23,6 @@ export default function MenuPage() {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold">Our delicious menu</h1>
-        <Image src="/api/qr" alt="QR to menu" width={48} height={48} className="h-12 w-12" />
-      </div>
-      {loading ? (
-        <div className="rounded-lg border border-coffee-200 bg-white p-6 text-coffee-700">
-          Loading menu&hellip;
-        </div>
-      ) : !pdfUrl ? (
-        <div className="rounded-lg border border-coffee-200 bg-white p-6 text-coffee-700">
-          No menu uploaded yet.
-        </div>
-      ) : (
-        <div className="overflow-hidden">
-          <iframe
-            src="/api/menu/file#toolbar=0&navpanes=0&scrollbar=0"
-            className="w-full h-[85vh] border-0"
-            title="Restaurant Menu PDF"
-          />
-        </div>
-      )}
-=======
     <div className="py-12">
       <div className="max-w-6xl mx-auto px-4">
         {/* Hero Section */}
@@ -63,7 +40,7 @@ export default function MenuPage() {
         <div className="text-center mb-8 animate-slide-in-left">
           <div className="inline-block bg-white rounded-2xl shadow-lg p-6">
             <h3 className="text-lg font-semibold text-coffee-900 mb-3">Scan for Digital Menu</h3>
-            <img src="/api/qr" alt="QR to menu" className="h-24 w-24 mx-auto" />
+            <Image src="/api/qr" alt="QR to menu" width={96} height={96} className="h-24 w-24 mx-auto" />
             <p className="text-sm text-coffee-600 mt-2">Scan with your phone camera</p>
           </div>
         </div>
@@ -74,7 +51,7 @@ export default function MenuPage() {
             <div className="bg-white rounded-3xl shadow-2xl p-12 text-center">
               <div className="flex items-center justify-center space-x-3 mb-4">
                 <div className="w-8 h-8 border-4 border-coffee-200 border-t-coffee-600 rounded-full animate-spin"></div>
-                <span className="text-lg font-semibold text-coffee-700">Loading our delicious menu...</span>
+                <span className="text-lg font-semibold text-coffee-700">Loading our delicious menu&hellip;</span>
               </div>
               <p className="text-coffee-600">Please wait while we prepare your menu experience</p>
             </div>
@@ -87,22 +64,22 @@ export default function MenuPage() {
               </div>
               <h3 className="text-2xl font-bold text-coffee-900 mb-4">Menu Coming Soon</h3>
               <p className="text-coffee-700 mb-6 max-w-md mx-auto">
-                We're currently updating our menu with exciting new items. 
+                We&apos;re currently updating our menu with exciting new items. 
                 Please check back soon or contact us for current offerings.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="/contact"
                   className="px-6 py-3 bg-coffee-600 text-white rounded-xl hover:bg-coffee-700 transition-colors font-semibold"
                 >
                   Contact Us
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/book-table"
                   className="px-6 py-3 border-2 border-coffee-300 text-coffee-700 rounded-xl hover:bg-coffee-50 transition-colors font-semibold"
                 >
                   Book a Table
-                </a>
+                </Link>
               </div>
             </div>
           ) : (
@@ -152,7 +129,6 @@ export default function MenuPage() {
           </div>
         </div>
       </div>
->>>>>>> e36d454fccaadabfd40cbafb3197b49ec50d7233
     </div>
   );
 }

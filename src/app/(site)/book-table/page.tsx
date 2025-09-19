@@ -31,17 +31,8 @@ export default function BookTablePage() {
     }
     setLoading(false);
     if (!res.ok) {
-<<<<<<< HEAD
-      const messageFromJson =
-        typeof json === "object" && json !== null && "error" in json &&
-        typeof (json as { error?: unknown }).error === "string"
-          ? (json as { error: string }).error
-          : "Something went wrong.";
-      setMessage(messageFromJson);
-=======
       setMessage((json && json.error) || "Something went wrong.");
       setMessageType('error');
->>>>>>> e36d454fccaadabfd40cbafb3197b49ec50d7233
       return;
     }
     setMessage("Reservation submitted! We will confirm shortly.");

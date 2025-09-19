@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import Link from "next/link";
-=======
-'use client';
+"use client";
 
 import { useState } from 'react';
->>>>>>> e36d454fccaadabfd40cbafb3197b49ec50d7233
+import Link from "next/link";
 
 export default function HomePage() {
   const [rating, setRating] = useState(0);
@@ -43,37 +40,21 @@ export default function HomePage() {
           </h1>
           <p className="text-xl md:text-2xl text-coffee-100/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             Where every cup tells a story. Experience the perfect blend of tradition, 
-            quality, and warm hospitality in our cozy café.
+            quality, and warm hospitality in our cozy caf&eacute;.
           </p>
-<<<<<<< HEAD
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <Link
-              className="px-5 py-2 rounded-md bg-white text-coffee-900 hover:bg-coffee-100"
-              href="/book-table"
-            >
-              Book a table
-            </Link>
-            <Link
-              className="px-5 py-2 rounded-md border border-white/30 hover:bg-white/10"
-              href="/menu"
-            >
-              View our menu
-            </Link>
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <Link
               className="px-8 py-4 rounded-full bg-coffee-600 hover:bg-coffee-500 text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               href="/book-table"
             >
               Book a Table
-            </a>
-            <a
+            </Link>
+            <Link
               className="px-8 py-4 rounded-full border-2 border-white/30 hover:bg-white/10 text-white font-semibold text-lg transition-all duration-300 backdrop-blur-sm"
               href="/menu"
             >
               View Our Menu
-            </a>
->>>>>>> e36d454fccaadabfd40cbafb3197b49ec50d7233
+            </Link>
           </div>
         </div>
       </section>
@@ -95,7 +76,7 @@ export default function HomePage() {
                   or quiet moments of reflection.
                 </p>
                 <p className="text-lg text-coffee-800 leading-relaxed mt-6">
-                  We believe that great coffee is more than just a beverage—it's an 
+                  We believe that great coffee is more than just a beverage—it&apos;s an 
                   experience that brings people together. From our carefully crafted 
                   espresso drinks to our freshly baked pastries, every item on our menu 
                   is prepared with love and attention to detail.
@@ -138,7 +119,7 @@ export default function HomePage() {
             Why Choose Capitano?
           </h2>
           <p className="text-lg text-coffee-700 max-w-2xl mx-auto">
-            We're committed to providing an exceptional coffee experience that goes beyond just great taste.
+            We&apos;re committed to providing an exceptional coffee experience that goes beyond just great taste.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 px-4 md:px-8">
@@ -163,38 +144,14 @@ export default function HomePage() {
               key={index}
               className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 mx-2"
             >
-<<<<<<< HEAD
-              <p className="text-sm text-coffee-800">
-                &ldquo;Amazing food and friendly staff. We&apos;ll be
-                back!&rdquo;
-              </p>
-              <p className="mt-3 text-xs text-coffee-600">
-                &ndash; Happy customer
-              </p>
-=======
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-coffee-900 mb-3">{feature.title}</h3>
               <p className="text-coffee-700 leading-relaxed">{feature.description}</p>
->>>>>>> e36d454fccaadabfd40cbafb3197b49ec50d7233
             </div>
           ))}
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="text-center">
-        <div className="rounded-2xl bg-coffee-800 text-white p-10">
-          <h3 className="text-2xl font-semibold">
-            Ready to experience our restaurant?
-          </h3>
-          <p className="mt-2 text-white/80">Reserve a table in seconds.</p>
-          <Link
-            href="/book-table"
-            className="inline-block mt-5 px-5 py-2 rounded-md bg-white text-coffee-900 hover:bg-coffee-100"
-          >
-            Book now
-          </Link>
-=======
       {/* Testimonials Section */}
       <section className="py-16">
         <div className="text-center mb-12">
@@ -202,7 +159,7 @@ export default function HomePage() {
             What Our Guests Say
           </h2>
           <p className="text-lg text-coffee-700 max-w-2xl mx-auto">
-            Don't just take our word for it—hear from our wonderful customers.
+            Don&apos;t just take our word for it—hear from our wonderful customers.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8">
@@ -233,12 +190,11 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-coffee-800 leading-relaxed mb-4 italic">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
               <p className="text-coffee-600 font-semibold">– {testimonial.name}</p>
             </div>
           ))}
->>>>>>> e36d454fccaadabfd40cbafb3197b49ec50d7233
         </div>
       </section>
 
@@ -249,7 +205,7 @@ export default function HomePage() {
             Share Your Experience
           </h2>
           <p className="text-lg text-coffee-700 max-w-2xl mx-auto">
-            We'd love to hear about your visit! Share your thoughts and help others discover the magic of Capitano Coffee & Café.
+            We&apos;d love to hear about your visit! Share your thoughts and help others discover the magic of Capitano Coffee & Caf&eacute;.
           </p>
         </div>
         <div className="max-w-2xl mx-auto">
@@ -375,18 +331,18 @@ export default function HomePage() {
               and discover why our customers keep coming back.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/book-table"
                 className="inline-block px-8 py-4 rounded-full bg-white text-coffee-900 font-semibold text-lg hover:bg-coffee-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Book Your Table
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/menu"
                 className="inline-block px-8 py-4 rounded-full border-2 border-white/30 text-white font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
               >
                 View Our Menu
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -427,10 +383,10 @@ export default function HomePage() {
             <div className="space-y-4">
               <h4 className="font-semibold text-coffee-100">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="/" className="text-coffee-300 hover:text-coffee-100 transition-colors">Home</a></li>
-                <li><a href="/menu" className="text-coffee-300 hover:text-coffee-100 transition-colors">Menu</a></li>
-                <li><a href="/book-table" className="text-coffee-300 hover:text-coffee-100 transition-colors">Book a Table</a></li>
-                <li><a href="/contact" className="text-coffee-300 hover:text-coffee-100 transition-colors">Contact</a></li>
+                <li><Link href="/" className="text-coffee-300 hover:text-coffee-100 transition-colors">Home</Link></li>
+                <li><Link href="/menu" className="text-coffee-300 hover:text-coffee-100 transition-colors">Menu</Link></li>
+                <li><Link href="/book-table" className="text-coffee-300 hover:text-coffee-100 transition-colors">Book a Table</Link></li>
+                <li><Link href="/contact" className="text-coffee-300 hover:text-coffee-100 transition-colors">Contact</Link></li>
               </ul>
             </div>
             

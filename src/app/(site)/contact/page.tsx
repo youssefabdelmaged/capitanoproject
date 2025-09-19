@@ -39,20 +39,10 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xl text-coffee-700 max-w-2xl mx-auto leading-relaxed">
-            We'd love to hear from you! Send us a message and we'll respond as soon as possible.
+            We&apos;d love to hear from you! Send us a message and we&apos;ll respond as soon as possible.
           </p>
         </div>
-<<<<<<< HEAD
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm mb-1">Your message</label>
-            <textarea
-              className="w-full rounded-md border border-coffee-300 bg-white px-3 py-2"
-              rows={6}
-              placeholder="Write to us&hellip;"
-            />
-=======
-
+        
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-in-left">
@@ -134,7 +124,6 @@ export default function ContactPage() {
                 </a>
               </div>
             </div>
->>>>>>> e36d454fccaadabfd40cbafb3197b49ec50d7233
           </div>
 
           {/* Contact Form */}
