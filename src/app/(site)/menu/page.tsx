@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function MenuPage() {
   const [pdfUrl, setPdfUrl] = useState<string | null>(null);
@@ -24,11 +25,11 @@ export default function MenuPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">Our delicious menu</h1>
-        <img src="/api/qr" alt="QR to menu" className="h-12 w-12" />
+        <Image src="/api/qr" alt="QR to menu" width={48} height={48} className="h-12 w-12" />
       </div>
       {loading ? (
         <div className="rounded-lg border border-coffee-200 bg-white p-6 text-coffee-700">
-          Loading menu…
+          Loading menu&hellip;
         </div>
       ) : !pdfUrl ? (
         <div className="rounded-lg border border-coffee-200 bg-white p-6 text-coffee-700">

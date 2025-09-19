@@ -21,7 +21,7 @@ export default function BookTablePage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    let json: any = null;
+    let json: unknown = null;
     try {
       json = await res.json();
     } catch {
@@ -29,7 +29,12 @@ export default function BookTablePage() {
     }
     setLoading(false);
     if (!res.ok) {
-      setMessage((json && json.error) || "Something went wrong.");
+      const messageFromJson =
+        typeof json === "object" && json !== null && "error" in json &&
+        typeof (json as { error?: unknown }).error === "string"
+          ? (json as { error: string }).error
+          : "Something went wrong.";
+      setMessage(messageFromJson);
       return;
     }
     setMessage("Reservation submitted! We will confirm shortly.");

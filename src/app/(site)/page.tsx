@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
     <div className="space-y-16">
@@ -11,18 +13,18 @@ export default function HomePage() {
             seasons.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <a
+            <Link
               className="px-5 py-2 rounded-md bg-white text-coffee-900 hover:bg-coffee-100"
               href="/book-table"
             >
               Book a table
-            </a>
-            <a
+            </Link>
+            <Link
               className="px-5 py-2 rounded-md border border-white/30 hover:bg-white/10"
               href="/menu"
             >
               View our menu
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -52,9 +54,12 @@ export default function HomePage() {
               className="rounded-lg border border-coffee-200 p-6 bg-white"
             >
               <p className="text-sm text-coffee-800">
-                “Amazing food and friendly staff. We'll be back!”
+                &ldquo;Amazing food and friendly staff. We&apos;ll be
+                back!&rdquo;
               </p>
-              <p className="mt-3 text-xs text-coffee-600">– Happy customer</p>
+              <p className="mt-3 text-xs text-coffee-600">
+                &ndash; Happy customer
+              </p>
             </div>
           ))}
         </div>
@@ -66,12 +71,12 @@ export default function HomePage() {
             Ready to experience our restaurant?
           </h3>
           <p className="mt-2 text-white/80">Reserve a table in seconds.</p>
-          <a
+          <Link
             href="/book-table"
             className="inline-block mt-5 px-5 py-2 rounded-md bg-white text-coffee-900 hover:bg-coffee-100"
           >
             Book now
-          </a>
+          </Link>
         </div>
       </section>
     </div>

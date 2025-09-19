@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SiteLayout({
   children,
 }: {
@@ -7,26 +9,26 @@ export default function SiteLayout({
     <div className="min-h-screen bg-coffee-50 text-coffee-900">
       <header className="sticky top-0 z-40 border-b border-black/10 bg-coffee-900 text-white">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-          <a href="/" className="font-semibold text-xl tracking-wide">
+          <Link href="/" className="font-semibold text-xl tracking-wide">
             Capitano
-          </a>
+          </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="/" className="hover:text-coffee-200">
+            <Link href="/" className="hover:text-coffee-200">
               Home
-            </a>
-            <a href="/menu" className="hover:text-coffee-200">
+            </Link>
+            <Link href="/menu" className="hover:text-coffee-200">
               Menu
-            </a>
-            <a href="/contact" className="hover:text-coffee-200">
+            </Link>
+            <Link href="/contact" className="hover:text-coffee-200">
               Contact
-            </a>
+            </Link>
           </nav>
-          <a
+          <Link
             href="/book-table"
             className="ml-4 px-4 py-2 rounded-md bg-coffee-600 hover:bg-coffee-500 text-white text-sm"
           >
             Book a Table
-          </a>
+          </Link>
         </div>
       </header>
       <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>

@@ -20,7 +20,7 @@ export default function ContactPage() {
             <textarea
               className="w-full rounded-md border border-coffee-300 bg-white px-3 py-2"
               rows={6}
-              placeholder="Write to us..."
+              placeholder="Write to us&hellip;"
             />
           </div>
           <button
