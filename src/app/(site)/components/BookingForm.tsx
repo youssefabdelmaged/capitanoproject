@@ -96,7 +96,7 @@ export default function BookingForm() {
             </svg>
             <span className="font-semibold">Reservation Successful!</span>
           </div>
-          <p className="text-sm mt-1">We'll contact you soon to confirm your booking.</p>
+          <p className="text-sm mt-1">We&apos;ll contact you soon to confirm your booking.</p>
         </div>
       )}
 
