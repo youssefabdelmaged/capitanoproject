@@ -23,7 +23,7 @@ export function signJwt(payload: object): string {
   return jwt.sign(payload, secret, { expiresIn: TOKEN_EXPIRY });
 }
 
-export function verifyJwt<T = any>(token: string): T | null {
+export function verifyJwt<T = unknown>(token: string): T | null {
   try {
     const secret = process.env.JWT_SECRET;
     if (!secret) throw new Error("JWT_SECRET is not set");

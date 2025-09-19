@@ -4,6 +4,8 @@ import { Menu } from "@/models/Menu";
 import { ensureCloudinaryConfigured, cloudinary } from "@/lib/cloudinary";
 import { requireAdmin } from "@/lib/auth";
 
+type CloudinaryUploadResult = { secure_url: string };
+
 export async function GET() {
   await connectToDatabase();
   const latest = await Menu.findOne().sort({ uploadedAt: -1 }).lean();
@@ -26,13 +28,13 @@ export async function POST(req: NextRequest) {
 
   const buffer = Buffer.from(await file.arrayBuffer());
 
-  const uploadRes = await new Promise<any>((resolve, reject) => {
+  const uploadRes: CloudinaryUploadResult = await new Promise((resolve, reject) => {
     cloudinary.uploader
       .upload_stream(
         { resource_type: "raw", folder: "menu_pdfs" },
         (error, result) => {
           if (error) return reject(error);
-          resolve(result);
+          resolve(result as CloudinaryUploadResult);
         }
       )
       .end(buffer);
