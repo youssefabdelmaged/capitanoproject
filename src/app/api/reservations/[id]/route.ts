@@ -5,7 +5,7 @@ import { requireAdmin } from "@/lib/auth";
 
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: { id: string | string[] } }
 ) {
   const admin = await requireAdmin(req.headers);
   if (!admin)
@@ -16,8 +16,9 @@ export async function PATCH(
   if (!status || !["pending", "accepted", "rejected"].includes(status)) {
     return NextResponse.json({ error: "Invalid status" }, { status: 400 });
   }
+  const id = Array.isArray(params.id) ? params.id[0] : params.id;
   const updated = await Reservation.findByIdAndUpdate(
-    params.id,
+    id,
     { status },
     { new: true }
   );
